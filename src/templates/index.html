@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>More Awesome Cool</h1>
+
+<hr>
+
+{% for x in posts %}
+    <h2>{{x.title}}</h2>
+        <ul>
+            {% for y in comments %}
+                    {% if y.post_id == x.id%}
+                        <li>{{y.description}}</li>
+                    {% endif %}
+                {% endfor%}
+        </ul>
+{% endfor %}
+</body>
+</html>
